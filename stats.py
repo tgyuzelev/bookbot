@@ -13,3 +13,15 @@ def count_characters(book_text):
     
     return data
 
+def sort_on(dict):
+    return dict["count"]
+
+def sort_characters_count(data):
+    list_data = []
+
+    for [key, value] in data.items():
+        list_data.append({ "symbol": key, "count": value })
+    
+    list_data.sort(reverse=True, key=sort_on)
+    return list_data
+
